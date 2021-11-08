@@ -8,8 +8,8 @@ public class BubbleSortPractice {
     // the array
     public static void sort(int[] array){
         // the code below is used to traverse the array from the last position to the first position
-        for(int lastSortedIndex = 0; lastSortedIndex > 0; lastSortedIndex--){
-            // the code below is used to traverse the from the first position to the element at
+        for(int lastSortedIndex = array.length - 1; lastSortedIndex > 0; lastSortedIndex--){
+            // the code below is used to traverse the array the first position to the element at
             // the last sorted position
             for(int index = 0; index < lastSortedIndex; index++){
                 // the code below is used to check that if the element at index is
@@ -36,12 +36,16 @@ public class BubbleSortPractice {
         // return since both the index are same
         if(i == j){
             return;
+        } else {
+            // the code below is used to create a temporary variable to get the value of the element at index i
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
 
-        // the code below is used to create a temporary variable to get the value of the element at index i
-        int temp = arr[i];
-        arr[j] = arr[i];
-        arr[i] = temp;
     }
+
+
+
 
 }
